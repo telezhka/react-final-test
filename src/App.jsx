@@ -5,6 +5,8 @@ import SecondPage from './pages/SecondPage/SecondPage';
 import HalfPage from './pages/HalfPage/HalfPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import { AppWrapper } from './App.styled';
+import User from './pages/User/User';
+
 
 const test = import.meta.env.VITE_API_TEST;
 
@@ -18,7 +20,7 @@ function App() {
           <Route path="/second" element={<SecondPage />}>
             <Route path=":half" element={<HalfPage />} />
           </Route>
-
+          <Route path="/user" element={<User />}/>
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
